@@ -1,0 +1,88 @@
+﻿<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="w-50">
+            <div class="card shadow">
+               @*  <div class="card-header bg-primary text-white text-center">
+                    <h4> Calculator</h4>
+                </div> *@
+                <div class="card-body">
+                    <div class="container mt-2">
+                        <div class="card-header text-center">
+                            <h2> Calculator</h2>
+                        </div>
+                        
+
+                        <form asp-controller="Cal" asp-action="Index" method="post" class="w-100">
+
+                            <div class="my-3">
+                                <label class="form-label">First Number </label>
+                                <input type="number" name="a" class="form-control" step="any" required />
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Second Number </label>
+                                <input type="number" name="b" class="form-control" step="any" required />
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="form-label">Third Number (Optional)</label>
+                                <input type="number" name="c" class="form-control" step="any" placeholder="Optional" />
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="form-label">Fourth Number (Optional)</label>
+                                <input type="number" name="d" class="form-control" step="any" placeholder="Optional" />
+                            </div>
+                            <hr />
+                            <div class="my-3">
+                                <label class="form-label">Choose Operation</label>
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-between gap-2">
+                                        <button type="submit" name="op" value="add" class="btn btn-outline-secondary flex-fill">Add ( + )</button>
+                                        <button type="submit" name="op" value="sub" class="btn btn-outline-secondary flex-fill">Sub ( - )</button>
+                                        <button type="submit" name="op" value="mul" class="btn btn-outline-secondary flex-fill">Mul ( × )</button>
+                                        <button type="submit" name="op" value="div" class="btn btn-outline-secondary flex-fill">Div ( / )</button>
+                                    </div>
+                                </div>
+                            </div>
+                                                       
+                        </form>
+                      
+                </div>
+                @if (ViewBag.Result != null)
+                {
+                    <div class="card-footer text-center bg-light mt-3">
+                        <h4>Result: <span class="text-primary">@ViewBag.Result</span></h4>
+                    </div>
+                }  
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@*  <div class="d-flex justify-content-center">
+                            <button type="submit" class="btn btn-primary">Calculate Now</button>
+                        </div> *@
+
+
+
+@* <form method="post">
+
+                        <input type="text" name="display" value="@ViewBag.Display"
+                               class="form-control mb-3 text-end fs-3" readonly />
+
+                        <div class="row g-2">
+                            @foreach (var btn in new[] { "7", "8", "9", "/", "4", "5", "6", "*", "1", "2", "3",
+                                                         "+", "0", "(",")", "-", ".", "AC", "C", "=" })
+                            {
+                                <div class="col-3">
+                                    <button type="submit" name="button" value="@btn"
+                                            class="btn btn-outline-secondary w-100 py-2 fw-bold">
+                                        @btn
+                                    </button>
+                                </div>
+                            }
+                        </div>
+                    </form> *@
