@@ -12,6 +12,7 @@ builder.Services.AddScoped<AddService>();
 builder.Services.AddScoped<SubService>();
 builder.Services.AddScoped<MulService>();
 builder.Services.AddScoped<DivService>();
+builder.Services.AddScoped<SumService>();
 
 
 var app = builder.Build();

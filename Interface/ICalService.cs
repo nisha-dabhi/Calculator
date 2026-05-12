@@ -8,10 +8,11 @@ namespace Interface
 {
     public interface ICalService
     {
-      //  double Calculate(string expression);
+       // double Calculate(string expression);
+        double Calculate(double[] nums);
 
-        string Cal(double a , double b);
-        string Cal(double a , double b , double c );
-        string Cal(double a, double b, double c , double d);
+        //   string Cal(double a , double b);
+        //   string Cal(double a , double b , double c );
+        //   string Cal(double a, double b, double c , double d);
     }
 }
